@@ -1,7 +1,7 @@
 from requests import get
 loc = get('https://ipapi.co/json/')
 res = loc.json()
-if (res['error']):
+if ('error' in res):
     print("The API has Rate Limited")
 else:
     print ("Your IP is: " + loc.json()['ip'])
