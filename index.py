@@ -1,7 +1,8 @@
 import flask
 import requests
 app = flask.Flask(__name__)
-@app.route("/api/<path:path>")
+@app.route('/', defaults={'path': ''})
+@app.route('/<path:path>')
 def main(path):
     if (path == "ip"):
         loc = requests.get('https://ipapi.co/json/')
