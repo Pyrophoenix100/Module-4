@@ -1,4 +1,3 @@
-import api.index as api
-a = api.handler()
+import requests
 def test_call():
-    assert "Your IP is:" in a.do_GET()
+    assert "Your IP is:" in requests.get("http://127.0.0.1").text
