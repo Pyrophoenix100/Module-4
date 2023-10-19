@@ -2,7 +2,7 @@ import flask
 import requests
 app = flask.Flask(__name__)
 @app.route('/api/ip')
-def main(path):
+def main():
     loc = requests.get('https://ipapi.co/json/')
     res = loc.json()
     if ('error' in res):
