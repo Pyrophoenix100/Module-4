@@ -1,7 +1,7 @@
 import flask
 import requests
 app = flask.Flask(__name__)
-@app.route("/")
+@app.route("/api")
 def main():
     loc = requests.get('https://ipapi.co/json/')
     res = loc.json()
