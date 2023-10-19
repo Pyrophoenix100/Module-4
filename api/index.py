@@ -6,7 +6,7 @@ def main():
     loc = requests.get('https://ipapi.co/json/')
     res = loc.json()
     if ('error' in res):
-        out = "The API has Rate Limited"
+        out = "The API has Rate Limited you"
     else:
         out = "Your IP is: " + loc.json()['ip']
     return out
